@@ -122,8 +122,8 @@ masterdf = pd.DataFrame(masterList, columns =['Character Name'])
 #     masterdf[players[i]] = pd.Series(name)
 
 #need to id the item and fill in the dps from a dictionary
-for i in range(0,len(full_name2)):
-    masterdf[full_name2[i]] = thisdict[full_name2[i]]
+df1 = pd.DataFrame(thisdict)
+masterdf = masterdf.join(df1)
 
 #print(masterdf.to_string())
 d2g.upload(masterdf, spreadsheet_key, credentials=creds, wks_name='Sheet2', col_names=True, row_names=False, clean=True)
