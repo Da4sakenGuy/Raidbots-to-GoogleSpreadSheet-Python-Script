@@ -81,6 +81,14 @@ Now you can run the script and the information will populate in worksheet Sheet2
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+<!-- ROADMAP -->
+## Roadmap
+
+- [ ] Add Sheet settings to the Script (automatic filter, automatic resizing, etc)
+- [ ] Pull droptimizer links from other worksheets
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- LICENSE -->
 ## License
 
