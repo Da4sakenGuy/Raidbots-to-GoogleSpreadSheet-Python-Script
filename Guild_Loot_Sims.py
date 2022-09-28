@@ -11,8 +11,9 @@ Go into each link and scrape the item and raw dps gain
 Write into the original google sheet the item name if it isn't there, if it is there then write the dps in right column
 '''
 import gspread
-from df2gspread import df2gspread as d2g
+#from df2gspread import df2gspread as d2g
 import pandas as pd
+from gspread_pandas import Spread, Client
 import io
 import requests
 import json
@@ -110,8 +111,8 @@ for x in range(0,len(masterList)):
             dpsList.append(dps)
             thisdict = add_values_in_dict(thisdict, full_name2[i], dpsList)
             
-
-spreadsheet_key = ''
+# old d2g method
+#spreadsheet_key = ''
 masterdf = pd.DataFrame(masterList, columns =['Character Name'])
 
 
@@ -122,12 +123,15 @@ masterdf = pd.DataFrame(masterList, columns =['Character Name'])
 #     masterdf[players[i]] = pd.Series(name)
 
 #need to id the item and fill in the dps from a dictionary
+
 df1 = pd.DataFrame(thisdict)
 masterdf = masterdf.join(df1)
 
-#print(masterdf.to_string())
-d2g.upload(masterdf, spreadsheet_key, credentials=creds, wks_name='Sheet2', col_names=True, row_names=False, clean=True)
+#old d2g method does not support automatic filter and resizing
+#d2g.upload(masterdf, spreadsheet_key, credentials=creds, wks_name='Sheet2', col_names=True, row_names=False, clean=True)
 
+spread = Spread('')
+spread.df_to_sheet(masterdf,index=False,sheet='Sheet2',add_filter=True)
 
 
 

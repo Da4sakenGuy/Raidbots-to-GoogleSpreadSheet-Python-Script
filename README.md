@@ -33,13 +33,14 @@ This Project exists to save time on loot decisions. In the past I had to open ev
 
 Follow the instructions listed here to set up your authentication:
 https://docs.gspread.org/en/latest/oauth2.html
+https://gspread-pandas.readthedocs.io/en/latest/configuration.html#alternate-workflows
 
-On line 33 fill in your local key's file name within the ""
+On line 34 fill in your local key's file name within the ""
 
-On line 36 fill in your spreadsheet url within the ""
+On line 37 fill in your spreadsheet url within the ""
 
-On line 114 fill in the spreadsheet key within the ''
-This is part of the spreadsheet URL
+On line 133 fill in the spreadsheet key within the ''
+This is part of the spreadsheet URL, everything that comes after d/ and before the next /
 
 ### Prerequisites
 
@@ -53,15 +54,22 @@ This is part of the spreadsheet URL
   pip install pandas
   ```
 
-* df2gspread
+* gspread-pandas
   ```sh
-  pip install df2gspread
+  pip install gspread-pandas
   ```
 
 * oauth2client
   ```sh
   pip install oauth2client
   ```
+
+Old version of script (Deprecated)
+* df2gspread
+  ```sh
+  pip install gspread-pandas
+  ``` 
+  
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
   
 <!-- USAGE EXAMPLES -->
@@ -84,7 +92,7 @@ Now you can run the script and the information will populate in worksheet Sheet2
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Add Sheet settings to the Script (automatic filter, automatic resizing, etc)
+- [x] Add Sheet settings to the Script (automatic filter, automatic resizing, etc)
 - [ ] Pull droptimizer links from other worksheets
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
