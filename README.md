@@ -67,7 +67,7 @@ This is part of the spreadsheet URL, everything that comes after d/ and before t
 Old version of script (Deprecated)
 * df2gspread
   ```sh
-  pip install gspread-pandas
+  pip install df2gspread
   ``` 
   
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
