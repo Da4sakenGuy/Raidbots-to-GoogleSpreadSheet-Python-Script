@@ -68,9 +68,13 @@ This is part of the spreadsheet URL
 ## Usage
 
 Create a Spreadsheet on the account you authenticated.
+
 After filling out all the information from the Getting Started section, create a second worksheet and keep its name as Sheet2.
+
 In Sheet 1 format your Columns so that A1 is Raid Character and B1 is Droptimizer Links.
+
 For your sanity you can name each link in the A column but it is not necessary.
+
 In the B column for every character you want to add copy the droptimizer URL in B2 to BN.
 
 Now you can run the script and the information will populate in worksheet Sheet2.
